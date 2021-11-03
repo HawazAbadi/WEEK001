@@ -112,7 +112,7 @@ public class SpotifyLikeApp {
     public static void play() {
 
         // open the audio file
-        final File file = new File("./src/library/spotify_fma_track1_cropped.wav");
+        final File file = new File("Ava_Luna_-_02_-_Cement_Lunch.wav");
 
         try {
         
