@@ -161,12 +161,17 @@ Long Rewound = (input.nextLong()*1000);
  
     public static void Search() { 
         String[] Songlist; 
-        Songlist = new String[5]; 
+        Songlist = new String[10]; 
         Songlist[0] = "./Music/Checkie Brown.wav"; 
         Songlist[1] = "./Music/Dee_Yan-Key_-_10_-_vacaciones_salsa.wav"; 
         Songlist[2] = "./Music/Bisou_-_04_-_Journey_of_King.wav";
         Songlist[3] = "./Music/Mid-Air_Machine_-_Burn_It_Down.wav";
         Songlist[4] = "./Music/Scott_Holmes_-_Storybook.wav";
+        Songlist[5] = "./Music/Ava_Luna_-_02_-_Cement_Lunch.wav";
+        Songlist[6] = "./Music/The_Dubbstyle_-_05_-_Zumbido.wav";
+        Songlist[7] = "./Music/Shot Full of Love(Don Williams)Lyrics.wav";
+        Songlist[8] = "./Music/Kitkat_Club_-_02_-_Welcome.wav";
+        Songlist[9] = "./Music/Kathleen_Martin_-_02_-_El_Preso_Numero_Nueve.wav";
  
         for(int k = 0; k < Songlist.length; k++) 
         { 
