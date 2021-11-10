@@ -1,19 +1,11 @@
-import java.io.File;  
-import java.io.IOException;  
-import java.util.Scanner;  
-   
-import javax.sound.sampled.AudioInputStream;  
-import javax.sound.sampled.AudioSystem;  
-import javax.sound.sampled.Clip;  
-import javax.sound.sampled.LineUnavailableException;  
-import javax.sound.sampled.UnsupportedAudioFileException; 
-import javax.sound.sampled.AudioFormat; 
-import javax.sound.sampled.SourceDataLine; 
-import javax.sound.sampled.DataLine.Info; 
-import javax.swing.JButton; 
- 
-import static javax.sound.sampled.AudioSystem.getAudioInputStream; 
-import static javax.sound.sampled.AudioFormat.Encoding.PCM_SIGNED; 
+import static javax.sound.sampled.AudioSystem.getAudioInputStream;
+
+import java.io.File;
+import java.util.Scanner;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip; 
  
 /* 
     To compile: javac SpotifyLikeApp.java 
