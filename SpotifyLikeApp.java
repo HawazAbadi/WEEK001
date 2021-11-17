@@ -15,6 +15,8 @@ import javax.sound.sampled.Clip;
 // declares a class for the app 
 public class SpotifyLikeApp { 
  
+    private static final boolean Favorite = false;
+    private static final boolean IsFavorite = false;
     // global variables for the app 
     String status; 
     Long position; 
@@ -62,9 +64,7 @@ public class SpotifyLikeApp {
         System.out.println("[L]ibrary"); 
         System.out.println("[P]lay"); 
         System.out.println("[Q]uit"); 
-         
- 
-        System.out.println(""); 
+        System.out.println("[F]avorite");
         System.out.print("Enter q to quit:"); 
  
     } 
@@ -93,12 +93,13 @@ public class SpotifyLikeApp {
                 System.out.println("-->Play<--"); 
                 play(song); 
                 break; 
- 
+            case "f":
+                System.out.println("-->Favorite<--");
+                Search();
             case "q": 
                 System.out.println("-->Quit<--"); 
                 break; 
              
- 
             default: 
                 break; 
         } 
@@ -115,26 +116,23 @@ public class SpotifyLikeApp {
              if (Playing == true) 
              { 
                  audioClip.stop(); 
-                 Playing = false; 
-             } 
- 
-            // create clip  
-            audioClip = AudioSystem.getClip(); 
-            // get input stream 
-            final AudioInputStream in = getAudioInputStream(file); 
-            audioClip.open(in); 
-            audioClip.setMicrosecondPosition(0); 
-            audioClip.loop(Clip.LOOP_CONTINUOUSLY); 
-            Playing = true; 
-        } catch(Exception e) { 
-            e.printStackTrace();  
-         
-        } 
-         
-         
-             
-         
-    } 
+               Playing = false; 
+              
+            }
+     // create clip  
+     audioClip = AudioSystem.getClip(); 
+     // get input stream 
+     final AudioInputStream in = getAudioInputStream(file); 
+     audioClip.open(in); 
+     audioClip.setMicrosecondPosition(0); 
+     audioClip.loop(Clip.LOOP_CONTINUOUSLY); 
+     Playing = true; 
+ } catch(Exception e) { 
+     e.printStackTrace();
+ }  
+  
+ } 
+
     public static void Rewind()  
     { 
         Scanner input = new Scanner(System.in); 
@@ -154,7 +152,7 @@ Long Rewound = (input.nextLong()*1000);
     public static void Search() { 
         String[] Songlist; 
         Songlist = new String[10]; 
-        Songlist[0] = "./Music/Checkie Brown.wav"; 
+        Songlist[0] = "./Music/Checkie Brown.wav";
         Songlist[1] = "./Music/Dee_Yan-Key_-_10_-_vacaciones_salsa.wav"; 
         Songlist[2] = "./Music/Bisou_-_04_-_Journey_of_King.wav";
         Songlist[3] = "./Music/Mid-Air_Machine_-_Burn_It_Down.wav";
@@ -183,3 +181,4 @@ Long Rewound = (input.nextLong()*1000);
  
  
 }
+
